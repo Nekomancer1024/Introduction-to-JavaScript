@@ -19,7 +19,11 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 18;
 
+if (votingAge >= 18){
+  console.log(true);
+}
 
 /*
 Task 1b - Values
@@ -31,10 +35,17 @@ Do the following:
 
    HINT: no function required
 */
+let response = 'learning code'
+let i = 0
 
-
-
-
+while(response === 'learning code'){
+  console.log('I am busy ' + response);
+  i++;
+  if(i > 4){
+    response = 'I am free!';
+    console.log(response);
+  }
+}
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,9 +57,11 @@ Do the following:
 
    HINT: look up the Number method
 */
+let year = '1999';
 
+year = 1999;
 
-
+console.log(year);
 
 /*
 Task 1d - Multiply
@@ -59,10 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a * b;
 }
 
+ console.log(multiply(7, 5));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -75,9 +89,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears){
+  return humanYears * 7;
 }
+
+console.log(dogYears(28));
 
 
 
@@ -149,9 +165,46 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  /*add your code here*/
+function game(userChoice, computerChoice){
+  // var computerC = Math.random();
+  // var user = Math.random();
+  
+  if (computerChoice < .33){
+    computerChoice === 'rock';
+  } else if (computerChoice <= .67) {
+    computerChoice === 'paper'
+  } else {
+    computerChoice === 'scissors';
+  }
+
+  if (userChoice < .33){
+    userChoice === 'rock';
+  } else if (userChoice <= .67) {
+    userChoice === 'paper'
+  } else {
+    userChoice === 'scissors';
+  }
+
+  if (userChoice === 'rock' && computerChoice === 'scissors'){
+    return "you win!";
+  } else if(userChoice === 'paper' && computerChoice === 'rock'){
+    return "you win!";
+  } else if(userChoice === 'scissors' && computerChoice === 'paper'){
+    return "you win!";
+  } else if (userChoice === 'scissors' && computerChoice === 'rock'){
+    return "you lose!";
+  } else if(userChoice === 'rock' && computerChoice === 'paper'){
+    return "you lose!";
+  } else if (userChoice === 'paper' && computerChoice === 'scissors'){
+    return "you lose!";
+  } else {
+    return "it's a tie";
+  }
 }
+console.log(game());
+console.log(game());
+console.log(game());
+
 
 
 
